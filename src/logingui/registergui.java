@@ -19,10 +19,11 @@ public class registergui extends javax.swing.JFrame {
      * Creates new form registergui
      */
     
-    
+    Login lg = new Login();
     
     public registergui() {
         initComponents();
+        
     }
 
     DBConnection db = new DBConnection();
@@ -250,10 +251,10 @@ public class registergui extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(this, "Record Not Added!");
                     }
                 }else{
-                    JOptionPane.showMessageDialog(this, "Password do not match! Please try again");
+                    JOptionPane.showMessageDialog(this, "Passwords do not match", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
             }else{
-                JOptionPane.showMessageDialog(this, "Record Not Added! Please provide all fields");
+                JOptionPane.showMessageDialog(this, "Please Provide all fields", "ERROR", JOptionPane.ERROR_MESSAGE);
             }
             
         } catch (SQLException ex) {
